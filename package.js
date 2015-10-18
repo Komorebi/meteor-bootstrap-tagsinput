@@ -1,16 +1,14 @@
 Package.describe({
-    name: 'ajduke:bootstrap-tagsinput',
+    name: 'walexander:bootstrap-tagsinput',
     summary: 'jQuery plugin providing a Twitter Bootstrap user interface for managing tags, repackaged for Meteor',
-    version: '0.7.0',
-    git: "https://github.com/ajduke/meteor-bootstrap-tagsinput.git"
+    version: '0.9.1',
+    git: "https://github.com/komorebi/meteor-bootstrap-tagsinput.git"
 });
 
-Package.on_use(function (api) {
-    // dependecies required by package
-    api.use('jquery@1.0.1', 'client');
-    api.use('twbs:bootstrap@3.3.5','client')
-    // adding the required file for package
-    api.add_files('lib/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js', 'client');
-    api.add_files('lib/bootstrap-tagsinput/dist/bootstrap-tagsinput.css', 'client');
-   // api.add_files('lib/bootstrap-tagsinput/dist/bootstrap-tagsinput-angular.js', 'client');
+Package.onUse(function(api) {
+  api.versionsFrom('1.2.0.2');
+  api.use('jquery@1.0.1', 'client');
+  api.use('twbs:bootstrap@3.3.5','client');
+  api.add_files('lib/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js', 'client');
+  api.add_files('lib/bootstrap-tagsinput/dist/bootstrap-tagsinput.css', 'client');
 });
